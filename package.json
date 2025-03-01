@@ -1,7 +1,7 @@
 {
     "name": "obito-skills-upgrade",
     "version": "1.0.0",
-    "description": "Slicing dari desain Figma ke HTML dan Tailwind CSS",
+    "description": "Website untuk upgrade skills",
     "main": "index.html",
     "scripts": {
         "dev": "npx serve",
@@ -9,12 +9,12 @@
         "deploy": "vercel --prod"
     },
     "keywords": [
-        "html",
-        "tailwindcss",
-        "figma",
-        "slicing"
+        "obito",
+        "skills",
+        "upgrade",
+        "website"
     ],
-    "author": "",
+    "author": "obito",
     "license": "MIT",
     "devDependencies": {
         "serve": "^14.2.1",

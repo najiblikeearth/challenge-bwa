@@ -7,15 +7,17 @@ Proyek ini adalah hasil slicing dari desain Figma ke HTML dan Tailwind CSS 3. Ha
 -   Desain responsif untuk desktop dan mobile
 -   Form validasi dengan JavaScript
 -   Fungsionalitas upload foto
--   Styling menggunakan Tailwind CSS 3
+-   Styling menggunakan Tailwind CSS 3 (via CDN)
 -   Custom CSS untuk styling tambahan
+-   Font Poppins dari Google Fonts
 
 ## Teknologi yang Digunakan
 
 -   HTML5
 -   CSS3
 -   JavaScript
--   Tailwind CSS 3
+-   Tailwind CSS 3 (via CDN)
+-   Google Fonts (Poppins)
 -   Vercel (untuk deployment)
 
 ## Cara Menjalankan Proyek
@@ -58,4 +60,4 @@ Atau Anda dapat men-deploy langsung dari GitHub dengan menghubungkan repositori 
 
 ## Catatan
 
-Proyek ini adalah hasil slicing dari desain Figma. Beberapa penyesuaian mungkin diperlukan untuk menyesuaikan dengan kebutuhan spesifik.
+Proyek ini menggunakan Tailwind CSS 3 melalui CDN dengan konfigurasi kustom. Ini memungkinkan pengembangan yang cepat tanpa perlu build step tambahan.

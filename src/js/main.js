@@ -1,7 +1,22 @@
-// Main JavaScript file
-
 document.addEventListener("DOMContentLoaded", function () {
-    // Form validation
+    const logoLink = document.querySelector(".flex.items-center a");
+    if (logoLink) {
+        logoLink.addEventListener("click", function (e) {
+            e.preventDefault();
+            k;
+            const logoImg = this.querySelector("img");
+            logoImg.style.transform = "scale(1.1)";
+            setTimeout(() => {
+                logoImg.style.transform = "scale(1)";
+            }, 200);
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        });
+    }
+
     const form = document.querySelector("form");
     if (form) {
         form.addEventListener("submit", function (e) {
@@ -19,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
 
-            // Email validation
             const emailInput = form.querySelector('input[type="email"]');
             if (emailInput && emailInput.value) {
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -29,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
-            // Password validation
             const passwordInput = form.querySelector('input[type="password"]');
             const confirmPasswordInput = form.querySelectorAll(
                 'input[type="password"]'
@@ -45,19 +58,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (isValid) {
                 alert("Form submitted successfully!");
-                // Here you would typically send the data to a server
-                // form.submit();
             } else {
                 alert("Please fill in all required fields correctly");
             }
         });
     }
 
-    // Add photo functionality
-    const addPhotoButton = document.querySelector(".w-32.h-32 button");
-    if (addPhotoButton) {
+    const photoContainer = document.getElementById("photoContainer");
+    const addPhotoButton = document.getElementById("addPhotoBtn");
+    const profilePhoto = document.getElementById("profilePhoto");
+    const deletePhotoButton = document.getElementById("deletePhotoBtn");
+
+    if (addPhotoButton && profilePhoto && deletePhotoButton) {
+        setTimeout(() => {
+            profilePhoto.src = "public/images/najib.png";
+            profilePhoto.classList.remove("hidden");
+            addPhotoButton.classList.add("hidden");
+            deletePhotoButton.classList.remove("hidden");
+        }, 500);
+
         addPhotoButton.addEventListener("click", function () {
-            // Create a file input element
             const fileInput = document.createElement("input");
             fileInput.type = "file";
             fileInput.accept = "image/*";
@@ -67,14 +87,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     const reader = new FileReader();
 
                     reader.onload = function (e) {
-                        const photoContainer =
-                            document.querySelector(".w-32.h-32");
-                        photoContainer.style.backgroundImage = `url(${e.target.result})`;
-                        photoContainer.style.backgroundSize = "cover";
-                        photoContainer.style.backgroundPosition = "center";
-
-                        // Hide the button
-                        addPhotoButton.style.display = "none";
+                        profilePhoto.src = e.target.result;
+                        profilePhoto.classList.remove("hidden");
+                        addPhotoButton.classList.add("hidden");
+                        deletePhotoButton.classList.remove("hidden");
                     };
 
                     reader.readAsDataURL(e.target.files[0]);
@@ -82,6 +98,13 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             fileInput.click();
+        });
+
+        deletePhotoButton.addEventListener("click", function () {
+            profilePhoto.src = "";
+            profilePhoto.classList.add("hidden");
+            addPhotoButton.classList.remove("hidden");
+            deletePhotoButton.classList.add("hidden");
         });
     }
 });
