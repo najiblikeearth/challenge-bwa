@@ -2,9 +2,9 @@
     "name": "obito-skills-upgrade",
     "version": "1.0.0",
     "description": "Website untuk upgrade skills",
-    "main": "index.html",
+    "main": "public/index.html",
     "scripts": {
-        "dev": "npx serve",
+        "dev": "npx serve public",
         "build": "echo 'No build step required'"
     },
     "keywords": [
