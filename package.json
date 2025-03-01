@@ -4,9 +4,7 @@
     "description": "Website untuk upgrade skills",
     "main": "index.html",
     "scripts": {
-        "dev": "npx serve",
-        "build": "mkdir -p dist && cp -r index.html src public dist/ && cp vercel.json dist/ 2>/dev/null || :",
-        "deploy": "vercel --prod"
+        "dev": "npx serve"
     },
     "keywords": [
         "obito",
@@ -17,7 +15,6 @@
     "author": "obito",
     "license": "MIT",
     "devDependencies": {
-        "serve": "^14.2.1",
-        "vercel": "^32.5.0"
+        "serve": "^14.2.1"
     }
 }
