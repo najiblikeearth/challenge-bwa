@@ -4,7 +4,8 @@
     "description": "Website untuk upgrade skills",
     "main": "index.html",
     "scripts": {
-        "dev": "npx serve"
+        "dev": "npx serve",
+        "build": "echo 'No build step required'"
     },
     "keywords": [
         "obito",

@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (addPhotoButton && profilePhoto && deletePhotoButton) {
         setTimeout(() => {
-            profilePhoto.src = "./public/images/najib.png";
+            profilePhoto.src = "/public/images/najib.png";
             profilePhoto.classList.remove("hidden");
             addPhotoButton.classList.add("hidden");
             deletePhotoButton.classList.remove("hidden");
