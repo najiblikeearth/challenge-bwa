@@ -5,7 +5,7 @@
     "main": "index.html",
     "scripts": {
         "dev": "npx serve",
-        "build": "mkdir -p dist && cp -r index.html src public dist/",
+        "build": "mkdir -p dist && cp -r index.html src public dist/ && cp vercel.json dist/ 2>/dev/null || :",
         "deploy": "vercel --prod"
     },
     "keywords": [

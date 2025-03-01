@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (logoLink) {
         logoLink.addEventListener("click", function (e) {
             e.preventDefault();
-            k;
+
             const logoImg = this.querySelector("img");
             logoImg.style.transform = "scale(1.1)";
             setTimeout(() => {
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (addPhotoButton && profilePhoto && deletePhotoButton) {
         setTimeout(() => {
-            profilePhoto.src = "public/images/najib.png";
+            profilePhoto.src = "./public/images/najib.png";
             profilePhoto.classList.remove("hidden");
             addPhotoButton.classList.add("hidden");
             deletePhotoButton.classList.remove("hidden");
